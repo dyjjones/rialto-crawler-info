@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About RialtoBot</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1f2328;
+    background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6edf3; background: #0d1117; }
+    a { color: #6cb6ff; }
+    .ua { background: #161b22; }
+  }
+  h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0; }
+  h2 { font-size: 1.25rem; font-weight: 600; margin-top: 2.5rem; }
+  p, ul { margin-top: 1rem; }
+  code { font-size: 0.9em; }
+  .ua {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background: #f6f8fa;
+    padding: 0.75rem 1rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
+  a { color: #0969da; }
+</style>
+</head>
+<body>
+  <h1>About RialtoBot</h1>
+  <p>
+    If you're reading this because you saw <code>RialtoBot</code>
+    in your server logs — welcome, and thanks for checking. Here's what it is
+    and how to stop it if you'd rather it left you alone.
+  </p>
+
+  <h2>What is RialtoBot?</h2>
+  <p>
+    RialtoBot is a small, polite web crawler that visits the public websites of
+    local restaurants, cafes, and other small businesses to read what's already
+    there — your name, hours, address, phone number, and menu (items, sections,
+    prices). We use this to build a starter page for your business, so that if
+    you ever want to claim it, most of the data-entry work is already done.
+  </p>
+  <p>
+    We are not a search engine, an ad network, or a data broker. We read the
+    same public pages a customer's browser would load, once in a while, and
+    nothing more.
+  </p>
+
+  <h2>What we collect</h2>
+  <p>Only what's already publicly visible on your own website:</p>
+  <ul>
+    <li>Business name, address, phone number, hours</li>
+    <li>Menu items, sections, and prices</li>
+    <li>Basic facts like whether you take reservations, offer delivery, etc., if your site says so</li>
+  </ul>
+  <p>
+    We do <strong>not</strong> collect anything from third-party sites (Google, Yelp,
+    delivery apps, social media) — only from pages on your own domain. We don't
+    create accounts, log in anywhere, or access anything that isn't already
+    visible to any visitor.
+  </p>
+
+  <h2>How RialtoBot behaves</h2>
+  <ul>
+    <li>
+      <strong>Identifies itself honestly.</strong>
+      Every request carries this exact User-Agent string, with a real,
+      working link back to this page — never anything else, never disguised
+      as a browser.
+    </li>
+    <li><strong>Respects robots.txt.</strong> If you disallow us, we stop.</li>
+    <li>
+      <strong>Rate-limited.</strong>
+      We wait several seconds between requests to your site and never fetch
+      more than a handful of pages per visit.
+    </li>
+    <li>
+      <strong>No evasion, ever.</strong>
+      We don't solve CAPTCHAs, route around blocks, use proxies to hide our
+      identity, or access anything behind a login.
+    </li>
+    <li><strong>We stop the moment you ask.</strong> See below.</li>
+  </ul>
+
+  <p class="ua">RialtoBot/1.0 (+https://bot.rialto.st/; contact@rialto.st)</p>
+
+  <h2>Opt out / takedown</h2>
+  <p>
+    If you'd rather we didn't visit your site at all, or want anything we've
+    already collected removed, email
+    <a href="mailto:contact@rialto.st">contact@rialto.st</a>
+    with your business name and website. We'll confirm and honor the request
+    within 24 hours — no forms, no runaround.
+  </p>
+
+  <h2>Questions?</h2>
+  <p>Same address: <a href="mailto:contact@rialto.st">contact@rialto.st</a>.</p>
+</body>
+</html>
