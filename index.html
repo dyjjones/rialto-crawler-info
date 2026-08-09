@@ -20,13 +20,13 @@
   @media (prefers-color-scheme: dark) {
     body { color: #e6edf3; background: #0d1117; }
     a { color: #6cb6ff; }
-    .ua { background: #161b22; }
+    .ua, pre { background: #161b22; }
   }
   h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0; }
   h2 { font-size: 1.25rem; font-weight: 600; margin-top: 2.5rem; }
   p, ul { margin-top: 1rem; }
   code { font-size: 0.9em; }
-  .ua {
+  .ua, pre {
     margin-top: 1rem;
     border-radius: 0.5rem;
     background: #f6f8fa;
@@ -35,70 +35,29 @@
     font-size: 0.8rem;
     word-break: break-all;
   }
+  pre { white-space: pre-wrap; }
   a { color: #0969da; }
 </style>
 </head>
 <body>
   <h1>About RialtoBot</h1>
   <p>
-    You found <code>RialtoBot</code> in your server logs. Here is what it is,
-    and how to make it stop.
+    RialtoBot is a small, automated crawler.
   </p>
 
-  <h2>What is RialtoBot?</h2>
-  <p>
-    RialtoBot is a small crawler.
-  </p>
-  <p>
-    It is not a search engine. It is not an ad network. It is not a data
-    broker. It reads the same pages a customer's browser would load, once in
-    a while, and nothing more.
-  </p>
+  <h2>Block it</h2>
+  <p>Add this to your robots.txt:</p>
+  <pre>User-agent: RialtoBot
+Disallow: /</pre>
+  <p>We check robots.txt before every visit. Disallow us, and we stop.</p>
 
-  <h2>What we collect</h2>
-  <p>Only what your own website already shows:</p>
-  <ul>
-    <li>Business name, address, phone number, hours</li>
-    <li>Menu items, sections, and prices</li>
-    <li>Simple facts like reservations or delivery, if your site says so</li>
-  </ul>
-  <p>
-    We do <strong>not</strong> touch third-party sites. No Google, no Yelp,
-    no delivery apps, no social media. Only pages on your own domain. We do
-    not create accounts, log in, or see anything a visitor could not already
-    see.
-  </p>
-
-  <h2>How RialtoBot behaves</h2>
-  <ul>
-    <li>
-      <strong>Honest.</strong> Every request carries this exact User-Agent
-      string, with a real, working link back to this page. Never disguised
-      as a browser.
-    </li>
-    <li><strong>Respects robots.txt.</strong> Disallow us, and we stop.</li>
-    <li>
-      <strong>Slow.</strong> We wait several seconds between requests and
-      never fetch more than a handful of pages in one visit.
-    </li>
-    <li>
-      <strong>No tricks.</strong> We do not solve CAPTCHAs, dodge blocks,
-      hide behind proxies, or go around a login.
-    </li>
-    <li><strong>Stops the moment you ask.</strong> See below.</li>
-  </ul>
-
+  <h2>User-Agent</h2>
   <p class="ua">RialtoBot/1.0 (+https://bot.rialto.st/; contact@rialto.st)</p>
 
-  <h2>Opt out / takedown</h2>
+  <h2>Opt out / questions</h2>
   <p>
-    Want us gone, or want what we collected removed? Email
-    <a href="mailto:contact@rialto.st">contact@rialto.st</a>
-    with your business name and website. We will confirm and stop within 24
-    hours. No forms.
+    Email <a href="mailto:contact@rialto.st">contact@rialto.st</a> with your
+    business name and website. We will confirm and stop within 24 hours.
   </p>
-
-  <h2>Questions?</h2>
-  <p>Same address: <a href="mailto:contact@rialto.st">contact@rialto.st</a>.</p>
 </body>
 </html>
