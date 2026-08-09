@@ -17,15 +17,9 @@
     color: #1f2328;
     background: #ffffff;
   }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e6edf3; background: #0d1117; }
-    a { color: #6cb6ff; }
-    .ua, pre { background: #161b22; }
-  }
   h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0; }
   h2 { font-size: 1.25rem; font-weight: 600; margin-top: 2.5rem; }
   p, ul { margin-top: 1rem; }
-  code { font-size: 0.9em; }
   .ua, pre {
     margin-top: 1rem;
     border-radius: 0.5rem;
@@ -36,7 +30,13 @@
     word-break: break-all;
   }
   pre { white-space: pre-wrap; }
-  a { color: #0969da; }
+  /* Must come after the base rules above: media queries don't add
+     specificity, so an override declared earlier in source order loses
+     to a later unconditional rule targeting the same selector. */
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6edf3; background: #0d1117; }
+    .ua, pre { background: #161b22; }
+  }
 </style>
 </head>
 <body>
@@ -53,11 +53,5 @@ Disallow: /</pre>
 
   <h2>User-Agent</h2>
   <p class="ua">RialtoBot/1.0 (+https://bot.rialto.st/; contact@rialto.st)</p>
-
-  <h2>Opt out / questions</h2>
-  <p>
-    Email <a href="mailto:contact@rialto.st">contact@rialto.st</a> with your
-    business name and website. We will confirm and stop within 24 hours.
-  </p>
 </body>
 </html>
