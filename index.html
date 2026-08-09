@@ -41,70 +41,63 @@
 <body>
   <h1>About RialtoBot</h1>
   <p>
-    If you're reading this because you saw <code>RialtoBot</code>
-    in your server logs — welcome, and thanks for checking. Here's what it is
-    and how to stop it if you'd rather it left you alone.
+    You found <code>RialtoBot</code> in your server logs. Here is what it is,
+    and how to make it stop.
   </p>
 
   <h2>What is RialtoBot?</h2>
   <p>
-    RialtoBot is a small, polite web crawler that visits the public websites of
-    local restaurants, cafes, and other small businesses to read what's already
-    there — your name, hours, address, phone number, and menu (items, sections,
-    prices). We use this to build a starter page for your business, so that if
-    you ever want to claim it, most of the data-entry work is already done.
+    RialtoBot is a small crawler. It visits the public websites of local
+    restaurants, cafes, and other small businesses, and reads what is already
+    there: name, hours, address, phone number, menu.
   </p>
   <p>
-    We are not a search engine, an ad network, or a data broker. We read the
-    same public pages a customer's browser would load, once in a while, and
-    nothing more.
+    It is not a search engine. It is not an ad network. It is not a data
+    broker. It reads the same pages a customer's browser would load, once in
+    a while, and nothing more.
   </p>
 
   <h2>What we collect</h2>
-  <p>Only what's already publicly visible on your own website:</p>
+  <p>Only what your own website already shows:</p>
   <ul>
     <li>Business name, address, phone number, hours</li>
     <li>Menu items, sections, and prices</li>
-    <li>Basic facts like whether you take reservations, offer delivery, etc., if your site says so</li>
+    <li>Simple facts like reservations or delivery, if your site says so</li>
   </ul>
   <p>
-    We do <strong>not</strong> collect anything from third-party sites (Google, Yelp,
-    delivery apps, social media) — only from pages on your own domain. We don't
-    create accounts, log in anywhere, or access anything that isn't already
-    visible to any visitor.
+    We do <strong>not</strong> touch third-party sites. No Google, no Yelp,
+    no delivery apps, no social media. Only pages on your own domain. We do
+    not create accounts, log in, or see anything a visitor could not already
+    see.
   </p>
 
   <h2>How RialtoBot behaves</h2>
   <ul>
     <li>
-      <strong>Identifies itself honestly.</strong>
-      Every request carries this exact User-Agent string, with a real,
-      working link back to this page — never anything else, never disguised
+      <strong>Honest.</strong> Every request carries this exact User-Agent
+      string, with a real, working link back to this page. Never disguised
       as a browser.
     </li>
-    <li><strong>Respects robots.txt.</strong> If you disallow us, we stop.</li>
+    <li><strong>Respects robots.txt.</strong> Disallow us, and we stop.</li>
     <li>
-      <strong>Rate-limited.</strong>
-      We wait several seconds between requests to your site and never fetch
-      more than a handful of pages per visit.
+      <strong>Slow.</strong> We wait several seconds between requests and
+      never fetch more than a handful of pages in one visit.
     </li>
     <li>
-      <strong>No evasion, ever.</strong>
-      We don't solve CAPTCHAs, route around blocks, use proxies to hide our
-      identity, or access anything behind a login.
+      <strong>No tricks.</strong> We do not solve CAPTCHAs, dodge blocks,
+      hide behind proxies, or go around a login.
     </li>
-    <li><strong>We stop the moment you ask.</strong> See below.</li>
+    <li><strong>Stops the moment you ask.</strong> See below.</li>
   </ul>
 
   <p class="ua">RialtoBot/1.0 (+https://bot.rialto.st/; contact@rialto.st)</p>
 
   <h2>Opt out / takedown</h2>
   <p>
-    If you'd rather we didn't visit your site at all, or want anything we've
-    already collected removed, email
+    Want us gone, or want what we collected removed? Email
     <a href="mailto:contact@rialto.st">contact@rialto.st</a>
-    with your business name and website. We'll confirm and honor the request
-    within 24 hours — no forms, no runaround.
+    with your business name and website. We will confirm and stop within 24
+    hours. No forms.
   </p>
 
   <h2>Questions?</h2>
